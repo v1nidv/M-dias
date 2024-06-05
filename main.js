@@ -1,6 +1,6 @@
 const  form = document.getElementById('form-atividade');
-const imgAprovado = '<img scr="./images/aprovado.png" alt"Emoji celebrando" />';
-const imgReprovado = '<img scr="./images/reprovado.png" alt"Emoji descepcionado" />';
+const imgAprovado = '<img scr="./images/aprovado.png" alt="Emoji celebrando" />';
+const imgReprovado = '<img scr="./images/reprovado.png" alt="Emoji descepcionado" />';  
 
 let linhas = '';
 
@@ -13,7 +13,7 @@ form.addEventListener('submit', function(e) {
     let linha = '<tr>';
     linha += `<td>${inputNomeAtividade.value}</td>`;
     linha += `<td>${inputNotaAtividade.value}</td>`;
-    linha += `<td>${inputNotaAtividade.value >= 7 ? 'imgAprovado': 'imgReprovado'}</td>`;
+    linha += `<td>${inputNotaAtividade.value >= 7 ? imgAprovado : imgReprovado}</td>`;
     linha += '</tr>';
 
     linhas += linha;
